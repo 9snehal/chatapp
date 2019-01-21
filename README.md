@@ -1,4 +1,4 @@
-# My Todo-App :
+# My chatapp :
 
 ## Create React App
 
@@ -14,45 +14,12 @@ To create a react app, we need to run following commands:
    `yarn start  or npm start`
 
 
-## Folder Structure
+## To run the chatapp clone this repo:
 
-After creation, your project should look like this:
+ `https://github.com/9snehal/chatapp`
 
-```
-`my-app/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-   manifest.json
- src/
-   config/
-     constants.js
-   features/
-     Home.js
-     Login.js
-     TodoItems.js
-   helpers/
-       auth.js
-   App.css
-   App.js
-   App.test.js
-   index.css
-   index.js
-   logo.svg
-   registerServiceWorker.js
-```
+ and run commands: `cd chatapp`
 
-
-
-## To run the todo-app, clone this repo:
-
- `https://github.com/9snehal/todo-app`
-
- and run commands: `cd todo-app`
-
-                  ` yarn start`
+                  ` npm start`
 
  and project will be run in the browser.
