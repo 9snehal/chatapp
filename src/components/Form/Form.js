@@ -8,6 +8,7 @@ export default class Form extends Component {
     this.state = {
       userName: 'Sebastian',
       message: '',
+      photoURL:'https://bit.ly/fcc-running-cats',
       list: [],
     };
     this.messageRef = firebase.database().ref().child('messages');
@@ -15,7 +16,8 @@ export default class Form extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if(nextProps.user) {
-      this.setState({'userName': nextProps.user.displayName});
+      this.setState({'userName': nextProps.user.displayName,
+    'photoURL':nextProps.user.photoURL});
     }
   }
   handleChange(event) {
@@ -26,7 +28,9 @@ export default class Form extends Component {
       var newItem = {
         userName: this.state.userName,
         message: this.state.message,
+        photoURL: this.state.photoURL,
       }
+      console.log(this.state.photoURL);
       this.messageRef.push(newItem);
       this.setState({ message: '' });
     }

@@ -1,17 +1,23 @@
 .message {
     position: relative;
     padding: 10px 60px 10px 20px;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, .05);
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, .20);
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.9;
 }
 .message:nth-child(even) {
-    background-color: rgba(0, 0, 0, .025);
+    background-color: rgba(0, 0, 0, .035);
 }
 .message__author {
     font-weight: 600;
     margin-right: 10px;
     color: rgba(0, 0, 0, 1);
+}
+img{
+  border-radius: 50%;
+height:35px;
+width:35px;
+float:left;
 }

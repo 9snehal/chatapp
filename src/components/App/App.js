@@ -17,41 +17,47 @@ class App extends Component {
   componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ user });
+      console.log(user);
     });
   }
   handleSignIn() {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
+    console.log("signin");
+
   }
   handleLogOut() {
     firebase.auth().signOut();
+    console.log("logout");
   }
 
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>ChatApp</h2>
+          <h2> My ChatApp</h2>
           { !this.state.user ? (
-                     <button
-                       className="app__button"
+                     <button type="button" className="btn btn-danger btn-social  btn-google"
                        onClick={this.handleSignIn.bind(this)}
                      >
-                       Sign in
-                     </button>
+                        <i className="fa fa-google"></i> Sign in with google
+                        </button>
                    ) : (
-                     <button
-                       className="app__button"
+                     <button type="button" className="btn btn-danger btn-social btn-google"
                        onClick={this.handleLogOut.bind(this)}
                      >
-                       Logout
+                         <i className="fa fa-google"></i>Logout
                      </button>
                    )}
                  </div>
                  <div className="app__list">
                    <Form user={this.state.user} />
-        </div>
-      </div>
+                  </div>
+                   <footer id="footer">
+                      <p>@Snehal Narkar</p>
+                   </footer>
+         </div>
+
     );
   }
 }

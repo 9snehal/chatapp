@@ -2,14 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
+  font-size:20px;
   padding: 20px;
   color: white;
 }
@@ -23,19 +19,21 @@
   padding: 20px;
   margin: 0 auto;
 }
-.app__button {
-  border: 0;
-  border-radius: 0;
-  padding: 10px 20px;
-  color: black;
-  background-color: white;
-  cursor: pointer;
-  opacity: .8;
-  outline: 0;
+button{
+  float:right;
+  margin-top:-50px;
 }
-.app__button:hover {
-  opacity: 1;
+footer{
+  background-color: #222;
+  height: 50px;
+  width:100%;
+  padding: 17px;
+  font-size: 18px;
+  bottom: 0px;
+  position: fixed;
+  color: white;
 }
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
